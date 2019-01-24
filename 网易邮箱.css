@@ -1,0 +1,277 @@
+body,h1,h2,h3,h4,h5,h6,ul,ol,li,form,p,dl,dt,dd,table,th,td,img,blockquote{
+    margin:0;
+    padding:0;
+    border:0;
+}
+body{
+    line-height: 160%;
+    font-size:12px;
+    color:#555;
+    text-align:center;
+    background-color:#F9F9F9;
+}
+a{
+    color:#039;
+    text-decoration:none;
+}
+a:hover{
+     text-decoration:underline;
+ }
+.header{
+    width: 960px;
+    height: 80px;
+    margin: 0 auto;
+    padding-top: 30px;
+    box-sizing: border-box;
+}
+.header .logo{
+    width: 644px;
+    height: 26px;
+    background: url("images/logo.png ") no-repeat 0 0;
+    float: left;
+    /*background: green;*/
+}
+.header .logo a{
+    width: 130px;
+    height: 26px;
+    display: inline-block;
+    /*background: red;*/
+    float: left;
+}
+.header .link{
+    float: right;
+    text-align: right;
+}
+.content{
+    width: 960px;
+    height: 751px;
+    /*background: green;*/
+    margin: 0 auto;
+}
+.content .content-tit{
+    height: 36px;
+    background-position: 0 0;
+    background-image: url("images/bgx.png");
+    background-color: #6495C6;
+    background-repeat: repeat-x;
+    border: #5B88B8 1px solid;
+    border-radius: 3px 3px 0 0;
+}
+.content .content-tit h1{
+    font-size: 14px;
+    line-height: 36px;
+    text-align: left;
+    text-indent: 2em;
+    color: white;
+    font-weight: normal;
+}
+.content .content-main{
+    width: 960px;
+    height: 713px;
+    /*background: pink;*/
+}
+.content .content-main .main-body{
+    width: 644px;
+    height: 713px;
+    background: white;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-top: none;
+    padding-top: 50px;
+    padding-left: 115px;
+}
+.content .content-main .main-body .body-top{
+    width: 527px;
+    height: 66px;
+    /*background: indianred;*/
+}
+.content .content-main .main-body .body-top ul{
+    list-style: none;
+    width: 412px;
+    height: 34px;
+    background-image: url("images/tab.jpg");
+}
+.content .content-main .main-body .body-top li{
+    display: inline-block;
+    float: left;
+    width: 137px;
+    height: 34px;
+}
+.content .content-main .main-body .body-top .a1{
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    line-height: 34px;
+}
+.content .content-main .main-body .body-top .a2{
+    font-size: 14px;
+    color: #555555;
+    line-height: 34px;
+}
+.content .content-main .main-body .body-top .a3{
+    font-size: 14px;
+    color: #555555;
+    line-height: 34px;
+}
+.content .content-main .main-body .body-top li a:hover {
+    text-decoration: none;
+}
+.content .content-main .main-body .body-bottom{
+    width: 570px;
+    height: 547px;
+    margin: 0 0 0 -43px;
+    box-sizing: border-box;
+    /*background: yellow;*/
+}
+.content .content-main .main-body .body-bottom p{
+    display: block;
+    color: #999;
+    /*width: 337px;*/
+    /*height: 43px;*/
+    padding-top: 7px;
+    padding-bottom: 23px;
+    margin-left: 110px;
+    text-align: left;
+}
+.content .content-main .main-body .body-bottom .bottom1{
+    width: 444px;
+    height: 27px;
+    /*background: pink;*/
+}
+.content .content-main .main-body .body-bottom .bottom1 .bot1-le{
+    height: 27px;
+    width: 87px;
+    float: left;
+    font-size: 14px;
+    /*background: green;*/
+}
+.content .content-main .main-body .body-bottom .bottom1 .bot1-le .star{
+    color: red;
+    float: none;
+}
+.content .content-main .main-body .body-bottom .bottom1 .bot1-le span{
+    float: right;
+    line-height: 27px;
+}
+.content .content-main .main-body .body-bottom .bottom1 .bot1-ri{
+    height: 27px;
+    width: 336px;
+    float: right;
+    /*background: blue;*/
+}
+.content .content-main .main-body .body-bottom .bottom1 .bot1-ri input.inp{
+    width: 336px;
+    height: 27px;
+    float: left;
+    box-sizing: border-box;
+}
+.content .content-main .main-body .body-bottom .bottom1 .bot1-ri input{
+    width: 210px;
+    height: 27px;
+    float: left;
+    box-sizing: border-box;
+    border: #ABABAB 1px solid;
+    border-radius: 3px;
+}
+.content .content-main .main-body .body-bottom .bottom1 .bot1-ri select{
+    width: 100px;
+    height: 27px;
+    float: right;
+    box-sizing: border-box;
+}
+/*bot2*/
+.content .content-main .main-body .body-bottom .bottom2{
+    width: 444px;
+    height: 129px;
+    box-sizing: border-box;
+    /*background: pink;*/
+}
+.content .content-main .main-body .body-bottom .bottom2 .bot2-le{
+    height: 27px;
+    width: 87px;
+    float: left;
+    font-size: 14px;
+    top: 12px;
+    /*background: green;*/
+    position: relative;
+}
+.content .content-main .main-body .body-bottom .bottom2 .bot2-le .star{
+    color: red;
+    float: none;
+}
+.content .content-main .main-body .body-bottom .bottom2 .bot2-le .s1{
+    float: right;
+    line-height: 27px;
+}
+.content .content-main .main-body .body-bottom .bottom2 .bot2-ri {
+    height: 129px;
+    width: 344px;
+    float: right;
+    box-sizing: border-box;
+    /*background: blue;*/
+}
+.content .content-main .main-body .body-bottom .bottom2 .bot2-ri .s2{
+    text-align: left;
+    color: #999999;
+    float: left;
+    position: relative;
+    top: 28px;
+}
+.content .content-main .main-body .body-bottom .bottom2 .bot2-ri input.inp{
+    width: 208px;
+    height: 27px;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+    top: 12px;
+}
+.content .content-main .main-body .body-bottom .bottom2 .bot2-ri input{
+    width: 210px;
+    height: 27px;
+    float: left;
+    box-sizing: border-box;
+    border: #ABABAB 1px solid;
+    border-radius: 3px;
+}
+.content .content-main .main-body .body-bottom .bottom2 .bot2-ri select{
+    width: 100px;
+    height: 27px;
+    float: right;
+    box-sizing: border-box;
+}
+.b2r-l{
+    width: 212px;
+    height: 129px;
+    float: left;
+    /*background: red;*/
+}
+.content .content-main .main-body .body-bottom .bottom2 .bot2-ri input.ins{
+    width: 140px;
+    height: 30px;
+    position: relative;
+    top: 38px;
+}
+.b2r-r{
+    width: 132px;
+    height: 129px;
+    float: right;
+}
+/*bot2结束*/
+.content .content-main .main-add{
+    width: 316px;
+    height: 713px;
+    /*background: green;*/
+    background: #f4f4f4;
+    float: right;
+    padding: 106px 0px 0px 30px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-top: none;
+}
+.footer{
+    width: 960px;
+    height: 84px;
+    background: yellow;
+    margin: 0 auto;
+}
