@@ -124,13 +124,34 @@ a:hover{
     box-sizing: border-box;
     /*background: yellow;*/
 }
+.content .content-main .main-body .body-bottom .inl{
+    width: 119px;
+    height: 37px;
+    background: url("images/glb_v2.png") no-repeat -144px -360px;
+    border: none;
+    float: left;
+    color: white;
+    font-weight: bold;
+    margin-left: 110px;
+    margin-top: 20px;
+}
+.content .content-main .main-body .body-bottom .lp{
+    display: block;
+    color: #999;
+    /*width: 337px;*/
+    /*height: 43px;*/
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 110px;
+    text-align: left;
+}
 .content .content-main .main-body .body-bottom p{
     display: block;
     color: #999;
     /*width: 337px;*/
     /*height: 43px;*/
     padding-top: 7px;
-    padding-bottom: 23px;
+    padding-bottom: 18px;
     margin-left: 110px;
     text-align: left;
 }
@@ -251,6 +272,7 @@ a:hover{
     height: 30px;
     position: relative;
     top: 38px;
+    background: 0 0 url("images/bgx_r2_c1.png") repeat ;
 }
 .b2r-r{
     width: 124px;
@@ -272,6 +294,13 @@ a:hover{
 .footer{
     width: 960px;
     height: 84px;
-    background: yellow;
+    /*background: yellow;*/
     margin: 0 auto;
+}
+.footer p{
+    color: #999999;
+    line-height: 50px;
+}
+.footer p a{
+    color: #999999;
 }
