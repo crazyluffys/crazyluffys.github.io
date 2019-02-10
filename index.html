@@ -2,137 +2,342 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>网易邮箱注册</title>
-    <link rel="stylesheet" href="网易邮箱.css" type="text/css">
+    <title>学成网首页</title>
 </head>
+<style>
+    /*通用样式区域开始*/
+    * {
+    margin: 0;
+    padding: 0;
+}
+    .clearfix:before,.clearfix:after {
+        content:".";
+        display:table;
+    }
+    .clearfix:after {
+        clear:both;
+    }
+    .clearfix {
+        *zoom:1;
+    }
+    ul {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: #050505;
+    }
+    input {
+        border: none;
+        box-sizing: border-box;
+    }
+    body {
+        background-color: #f3f5f7;
+        font-family: "Microsoft YaHei UI";
+    }
+    .container { /* 因为我们的版心宽度都是1200 都要居中对齐 我们就声明一个公共类 */
+        width: 1200px;
+        margin: 0 auto;
+    }
+        /*页面头部区域*/
+    header {
+        /*width: 1920px;*/
+        height: 101px;
+        /*background-color: blue;*/
+        overflow: hidden;
+    }
+    header nav {
+        height: 42px;
+        width: 1588px;
+        /*background-color: pink;*/
+        margin: 30px auto;
+    }
+    /*头部logo区域*/
+    header nav .logo {
+        float: left;
+        /*margin-left: 160px;*/
+    }
+    /*头部导航文字区域*/
+    header nav .nav-bar{
+        float: left;
+        line-height: 42px;
+        margin-left: 70px;
+    }
+    header nav .nav-bar ul li {
+        float: left;
+        margin-right: 15px;
+    }
+    header nav .nav-bar ul li:last-child {
+        margin-right: 0px;
+    }
+    header nav .nav-bar ul li a {
+        color: #050505;
+        font-size: 18px;
+        letter-spacing: 2px;
+        display: block;
+        padding: 0 9px;
+    }
+    header nav .nav-bar ul li a:hover {
+        border-bottom: #00a4ff 2px solid;
+        /*color: #00a4ff;*/
+    }
+    /*搜索区域*/
+    header nav .search {
+        width: 410px;
+        height: 42px;
+        float: right;
+        border: 1px #00a4ff solid;
+        /*margin-left: 370px;*/
+    }
+    header nav .search input[type=text] {
+        width: 360px;
+        height: 42px;
+        float: left;
+        padding-left: 20px;
+        color: #bfbfbf;
+        font-size: 14px;
+        line-height: 42px;
+        box-sizing: border-box;
+    }
+    header nav .search input[type=submit] {
+        width: 50px;
+        height: 42px;
+        float: left;
+        background: #00a4ff url(images/search.png) center center no-repeat;
+    }
+    /*个人中心区域*/
+    header nav .personal {
+        width: 260px;
+        height: 42px;
+        line-height: 42px;
+        margin-left: 30px;
+        font-size: 14px;
+        /*background-color: pink;*/
+        float: right;
+    }
+    header nav .personal img {
+        margin: 0px 15px;
+    }
+    /*头部区域结束*/
+    /*banner区域开始*/
+    .banner {
+        height: 420px;
+        background-color: #1c036c;
+    }
+    .banner-center {
+        height: 420px;
+        background: url(images/banner.png) 0 0 no-repeat;
+    }
+    /*左侧导航栏区域*/
+    .slidebar{
+        height: 420px;
+        width: 190px;
+        background-color: rgba(0,0,0,0.3);
+        padding: 14px 20px;
+        box-sizing: border-box;
+        float: left;
+    }
+    .slidebar li a {
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 44px;
+    }
+    .slidebar li a:hover {
+        color: #00a4ff;
+    }
+    .slidebar li a span{
+        float: right;
+        font-family: Arial;
+    }
+    /*课表区域*/
+    .classtable {
+        width: 228px;
+        height: 300px;
+        float: right;
+        background-color: #ffffff;
+        margin-top: 50px;
+    }
+    .classtable dt {
+        width: 228px;
+        height: 48px;
+        color: #fff;
+        line-height: 48px;
+        text-align: center;
+        background-color: #9bceea;
+        letter-spacing: 2px;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+    .classtable dd {
+        height: 60px;
+        width: 190px;
+        margin: 0 auto;
+        border-bottom: 1px #ccc solid;
+        box-sizing: border-box;
+        padding-top:12px;
+    }
+    .classtable dd:last-child {
+        border:none;
+    }
+    .classtable dd:nth-child(4) h4,
+    .classtable dd:nth-child(4) p {
+        color: #00a4ff;
+    }
+
+    .classtable dd h4{
+        font-size: 16px;
+        color: #4e4e4e;
+        font-weight: normal;
+    }
+    .classtable dd p {
+        font-size: 14px;
+        color: #a5a5a5;
+    }
+    .classtable dd a {
+        display: block;
+        height: 38px;
+        width: 198px;
+        border: 1px solid #00a4ff;
+        text-align: center;
+        line-height: 38px;
+        color: #00a4ff;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+    .classtable dd a:hover {
+        background-color: #00a4ff;
+        color: #ffffff;
+    }
+    /*banner区域结束*/
+    /*推荐区域开始*/
+    /*推荐区导航栏*/
+    .recommend {
+        height: 60px;
+        background-color: #fff;
+        margin-top: 8px;
+        box-shadow: 0px 2px 3px 0px rgba(118, 118, 118, 0.2);
+        box-sizing: border-box;
+        padding: 21px 0;
+    }
+    .recommend ul a {
+        width: 122px;
+        height: 18px;
+        font-size: 16px;
+        color: #050505;
+        float: left;
+        text-align: center;
+        border-right: #bfbfbf solid 1px;
+    }
+    .recommend ul a:hover {
+        color: #00a4ff;
+    }
+    .recommend li:first-child a{
+        color: #00a4ff;
+        font-weight: bold;
+    }
+    .recommend li:nth-last-child(2) a {
+        border:none;
+
+    }
+    .recommend li:last-child a {
+        color: #00a4ff;
+        border:none;
+        float: right;
+        font-weight: bold;
+    }
+    /*推荐区内容*/
+    
+    /*推荐区域结束*/
+</style>
+
+<!--结构区域-->
 <body>
-<!--网页开头-->
-<div class="header">
-    <div class="logo">
-        <a href="https://mail.163.com/" title="网易163免费邮"></a><a href="http://www.126.com/" title="网易126免费邮"></a><a href="http://www.yeah.net/" title="网易Yeah.net免费邮"></a>
-    </div>
-    <div class="link">
-        <a href="#">了解更多</a>
-        |
-        <a href="#">反馈意见</a>
-    </div>
-</div>
-<!--网页开头结束-->
-<!--网页内容开始-->
-<div class="content">
-    <div class="content-tit">
-        <h1>欢迎注册网易邮箱！邮件地址可以登录使用其他网易旗下产品。</h1>
-    </div>
-    <div class="content-main">
-        <div class="main-body">
-            <div class="body-top">
+<!--头部区域-->
+    <header>
+        <!--导航栏区域-->
+        <nav>
+            <!--logo区域-->
+            <div class="logo"><img src="images/logo.png" ></div>
+            <!--nav-bar区域-->
+            <div class="nav-bar">
                 <ul>
-                    <li>
-                        <a href="#" class="a1">注册字母邮箱</a>
-                    </li>
-                    <li>
-                        <a href="#" class="a2">注册手机号码邮箱</a>
-                    </li>
-                    <li>
-                        <a href="#" class="a3">注册VIP邮箱</a>
-                    </li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">课程</a></li>
+                    <li><a href="#">职业规划</a></li>
                 </ul>
             </div>
-            <div class="body-bottom">
-                <div class="bottom1">
-                    <div class="bot1-le">
-                        <span><span class="star">*</span>邮件地址</span>
-                    </div>
-                    <div class="bot1-ri">
-                        <input type="text">@<select>
-                            <option value="163.com" selected="selected">163.com</option>
-                            <option value="126.com">126.com</option>
-                            <option value="yeah.net">yeah.net</option>
-                        </select>
-                    </div>
-                </div>
-                <p>6~18个字符，可使用字母、数字、下划线，需以字母开头</p>
-                <div class="bottom1">
-                    <div class="bot1-le">
-                        <span><span class="star">*</span>密码</span>
-                    </div>
-                    <div class="bot1-ri">
-                        <input type="password" class="inp">
-                    </div>
-                </div>
-                <p>6~16个字符，区分大小写</p>
-                <div class="bottom1">
-                    <div class="bot1-le">
-                        <span><span class="star">*</span>确认密码</span>
-                    </div>
-                    <div class="bot1-ri">
-                        <input type="password" class="inp">
-                    </div>
-                </div>
-                <p>请再次填写密码</p>
-                <div class="bottom1">
-                    <div class="bot1-le">
-                        <span><span class="star">*</span>手机号码</span>
-                    </div>
-                    <div class="bot1-ri">
-                        <input type="text" value="+86" class="inp">
-                    </div>
-                </div>
-                <p>忘记密码时，可以通过该手机号码快速找回密码</p>
-
-                <!--bottom2开始-->
-
-                <div class="bottom2">
-                    <div class="bot2-le">
-                        <span class="s1"><span class="star">*</span>验证码</span>
-                    </div>
-                    <div class="bot2-ri">
-                        <div class="b2r-l">
-                            <input type="text" class="inp">
-                            <span class="s2">请填写图片中的字符，不区分大小写</span>
-                            <input type="submit" value="免费获取验证码" class="ins">
-                        </div>
-                        <div class="b2r-r">
-                            <img src="images/call.jpg" alt="验证码">
-                            <a href="#">看不清楚？换张图片</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bottom1">
-                    <div class="bot1-le">
-                        <span><span class="star">*</span>短信验证码</span>
-                    </div>
-                    <div class="bot1-ri">
-                        <input type="text" class="inp">
-                    </div>
-                </div>
-                <p>请查收手机短信，并填写短信中的验证码</p>
-                <p class="lp">
-                    <input type="checkbox" checked="checked">
-                    同意<a href="#">"服务条款"</a>和<a href="#">"隐私权相关政策"</a>
-                </p>
-                <input type="submit" value="立即注册" class="inl">
+            <!--个人中心区域-->
+            <div class="personal">
+                <a href="#">个人中心<img src="images/tixing.png" alt=""></a>
+                <a href="#"><img src="images/touxiang.png" alt="">qq-leishui</a>
+            </div>
+            <!--搜索区域-->
+            <div class="search">
+                <form action="">
+                    <input type="text" name="" id="" placeholder="输入关键词">
+                    <input type="submit" value="">
+                </form>
+            </div>
+        </nav>
+    </header>
+<!--banner区域-->
+    <div class="banner">
+        <div class="banner-center container">
+            <!--左侧导航栏区域-->
+            <div class="slidebar">
+                <ul>
+                    <li><a href="#">前端开发<span>></span></a></li>
+                    <li><a href="#">后端开发<span>></span></a></li>
+                    <li><a href="#">移动开发<span>></span></a></li>
+                    <li><a href="#">人工智能<span>></span></a></li>
+                    <li><a href="#">商业预测<span>></span></a></li>
+                    <li><a href="#">云计算&大数据<span>></span></a></li>
+                    <li><a href="#">运维&从测试<span>></span></a></li>
+                    <li><a href="#">UI设计<span>></span></a></li>
+                    <li><a href="#">产品<span>></span></a></li>
+                </ul>
+            </div>
+            <!--课表区域-->
+            <div class="classtable">
+                <dl>
+                    <dt>我的课程表</dt>
+                    <dd>
+                        <h4>继续学习 程序语言设计</h4>
+                        <p>正在学习-使用对象</p>
+                    </dd>
+                    <dd>
+                        <h4>继续学习 程序语言设计</h4>
+                        <p>正在学习-使用对象</p>
+                    </dd>
+                    <dd>
+                        <h4>继续学习 程序语言设计</h4>
+                        <p>正在学习-使用对象</p>
+                    </dd>
+                    <dd>
+                        <a href="#">全部课程</a>
+                    </dd>
+                </dl>
             </div>
         </div>
-        <div class="main-add">
-            <img src="images/reg_master.gif" alt="广告">
-        </div>
     </div>
-</div>
-<!--网页内容结束-->
-<!--网页页脚开头-->
-<div class="footer">
-    <p>
-        <a href="#">关于网易</a>
-        <a href="#">关于网易免费邮</a>
-        <a href="#">邮箱官方博客</a>
-        <a href="#">客户服务</a>
-        <a href="#">隐私政策</a>
-        <a href="#"></a>
-|  网易公司版权所有 © 1997-2019
-    </p>
-    <p>数据来源：艾媒咨询《2015-2018中国个人邮箱行业研究报告》</p>
-</div>
-<!--网页页脚结束-->
+    <!--推荐区域-->
+    <!--推荐区导航-->
+    <div class="recommend container">
+        <ul>
+            <li><a href="#">精品推荐</a></li>
+            <li><a href="#">JQuery</a></li>
+            <li><a href="#">Spark</a></li>
+            <li><a href="#">MySQL</a></li>
+            <li><a href="#">JavaWeb</a></li>
+            <li><a href="#">MySQL</a></li>
+            <li><a href="#">JavaWeb</a></li>
+            <li><a href="#">修改兴趣</a></li>
+        </ul>
+    </div>
+    <!--推荐区内容-->
+
 </body>
+
 </html>
