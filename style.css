@@ -1,0 +1,394 @@
+/*通用样式区域开始*/
+* {
+    margin: 0;
+    padding: 0;
+}
+.clearfix:before,.clearfix:after {
+    content:".";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    *zoom:1;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #050505;
+}
+input {
+    border: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f3f5f7;
+    font-family: "Microsoft YaHei UI";
+}
+.container { /* 因为我们的版心宽度都是1200 都要居中对齐 我们就声明一个公共类 */
+    width: 1200px;
+    margin: 0 auto;
+}
+/*页面头部区域*/
+header {
+    /*width: 1920px;*/
+    height: 101px;
+    /*background-color: blue;*/
+    overflow: hidden;
+}
+header nav {
+    height: 42px;
+    width: 1588px;
+    /*background-color: pink;*/
+    margin: 30px auto;
+}
+/*头部logo区域*/
+header nav .logo {
+    float: left;
+    /*margin-left: 160px;*/
+}
+/*头部导航文字区域*/
+header nav .nav-bar{
+    float: left;
+    line-height: 42px;
+    margin-left: 70px;
+}
+header nav .nav-bar ul li {
+    float: left;
+    margin-right: 15px;
+}
+header nav .nav-bar ul li:last-child {
+    margin-right: 0px;
+}
+header nav .nav-bar ul li a {
+    color: #050505;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: block;
+    padding: 0 9px;
+}
+header nav .nav-bar ul li a:hover {
+    border-bottom: #00a4ff 2px solid;
+    /*color: #00a4ff;*/
+}
+/*搜索区域*/
+header nav .search {
+    width: 410px;
+    height: 42px;
+    float: right;
+    border: 1px #00a4ff solid;
+    /*margin-left: 370px;*/
+}
+header nav .search input[type=text] {
+    width: 360px;
+    height: 42px;
+    float: left;
+    padding-left: 20px;
+    color: #bfbfbf;
+    font-size: 14px;
+    line-height: 42px;
+    box-sizing: border-box;
+}
+header nav .search input[type=submit] {
+    width: 50px;
+    height: 42px;
+    float: left;
+    background: #00a4ff url(images/search.png) center center no-repeat;
+}
+/*个人中心区域*/
+header nav .personal {
+    width: 260px;
+    height: 42px;
+    line-height: 42px;
+    margin-left: 30px;
+    font-size: 14px;
+    /*background-color: pink;*/
+    float: right;
+}
+header nav .personal img {
+    margin: 0px 15px;
+}
+/*头部区域结束*/
+/*banner区域开始*/
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner-center {
+    height: 420px;
+    background: url(images/banner.png) 0 0 no-repeat;
+    position: relative;
+}
+/*左侧导航栏区域*/
+.slidebar{
+    height: 420px;
+    width: 190px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 14px 20px;
+    box-sizing: border-box;
+    float: left;
+}
+.slidebar li a {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 44px;
+}
+.slidebar li a:hover {
+    color: #00a4ff;
+}
+.slidebar li a span{
+    float: right;
+    font-family: Arial;
+}
+/*课表区域*/
+.classtable {
+    width: 228px;
+    height: 300px;
+    float: right;
+    background-color: #ffffff;
+    margin-top: 50px;
+}
+.classtable dt {
+    width: 228px;
+    height: 48px;
+    color: #fff;
+    line-height: 48px;
+    text-align: center;
+    background-color: #9bceea;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.classtable dd {
+    height: 60px;
+    width: 190px;
+    margin: 0 auto;
+    border-bottom: 1px #ccc solid;
+    box-sizing: border-box;
+    padding-top:12px;
+}
+.classtable dd:last-child {
+    border:none;
+}
+.classtable dd:nth-child(4) h4,
+.classtable dd:nth-child(4) p {
+    color: #00a4ff;
+}
+
+.classtable dd h4{
+    font-size: 16px;
+    color: #4e4e4e;
+    font-weight: normal;
+}
+.classtable dd p {
+    font-size: 14px;
+    color: #a5a5a5;
+}
+.classtable dd a {
+    display: block;
+    height: 38px;
+    width: 198px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.classtable dd a:hover {
+    background-color: #00a4ff;
+    color: #ffffff;
+}
+/*小圆点区域*/
+.dot {
+    width: 176px;
+    height: 12px;
+    position: absolute;
+    bottom: 34px;
+    left: 50%;
+    margin-left: -115px;
+}
+.dot li {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255,255,255,0.4);
+    float: left;
+    margin: 0 8px;
+    border-radius: 50%;
+}
+.dot li:first-child {
+    width: 19px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius:5px
+}
+/*banner
+区域结束*/
+/*推荐区域开始*/
+/*推荐区导航栏*/
+.recommend {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 8px;
+    box-shadow: 0px 2px 3px 0px rgba(118, 118, 118, 0.2);
+    box-sizing: border-box;
+    padding: 21px 0;
+}
+.recommend ul a {
+    width: 122px;
+    height: 18px;
+    font-size: 16px;
+    color: #050505;
+    float: left;
+    text-align: center;
+    border-right: #bfbfbf solid 1px;
+}
+.recommend ul a:hover {
+    color: #00a4ff;
+}
+.recommend li:first-child a{
+    color: #00a4ff;
+    font-weight: bold;
+}
+.recommend li:nth-last-child(2) a {
+    border:none;
+
+}
+.recommend li:last-child a {
+    color: #00a4ff;
+    border:none;
+    float: right;
+    font-weight: bold;
+}
+/*推荐区域结束*/
+/*精品推荐区开始*/
+.rec {
+    margin-top: 37px;
+}
+/*精品推荐头部*/
+.rec-hd {
+    height: 40px;
+}
+.rec-hd h4 {
+    font-weight: normal;
+    color: #494949;
+    float: left;
+}
+.rec-hd a {
+    color: #a5a5a5;
+    font-size: 12px;
+    float: right;
+    margin-right: 35px;
+    margin-top: 8px;
+}
+.rec-hd a:hover {
+    color: #00a4ff;
+}
+/*精品推荐主体部分*/
+.rec-bd ul li {
+    width: 228px;
+    height: 270px;
+    background-color: #ffffff;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.rec-bd ul li .hot {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.rec-bd ul li:nth-child(5n) {
+    margin: 0;
+}
+
+.rec-bd ul li h5 {
+    margin: 15px 20px 18px 24px;
+}
+.rec-bd ul li p {
+    margin: 0 20px 27px 24px;
+    font-size: 12px;
+    color: #999999;
+}
+.rec-bd ul li p span {
+    color: #ff7c2d;
+}
+/*精品推荐区结束*/
+/*页面底部*/
+footer {
+    height: 273px;
+    background-color: #fff;
+}
+footer .foot {
+    height: 273px;
+}
+footer .foot-l {
+    width: 665px;
+    height: 273px;
+    float: left;
+    /*background-color: pink;*/
+    padding-top: 33px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+footer .foot-l p {
+    margin-top: 20px;
+    color: #666666;
+    font-size: 12px;
+    font-family: SimSun;
+    line-height: 18px;
+}
+footer .foot-l a {
+    width: 120px;
+    height: 36px;
+    display: block;
+    border: 1px solid #00a4ff;
+    color: #00a4ff;
+    font-size: 16px;
+    line-height: 36px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+footer .foot-l a:hover {
+    background-color: #00a4ff;
+    color: white;
+    font-weight: bold;
+}
+footer .foot-r {
+    width: 535px;
+    height: 273px;
+    float: right;
+    /*background-color: red;*/
+    padding-top: 33px;
+    box-sizing: border-box;
+}
+footer .foot-r dl {
+    width: 226px;
+    color: #333333;
+    float: left;
+
+}
+
+footer .foot-r dl:last-child {
+    width: 83px;
+}
+footer .foot-r dl dt {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+footer .foot-r dl dd {
+    font-size: 12px;
+    line-height: 22px;
+}
+footer .foot-r dl dd a:hover {
+    color: #00a4ff;
+}

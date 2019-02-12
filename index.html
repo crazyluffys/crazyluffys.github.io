@@ -4,254 +4,7 @@
     <meta charset="UTF-8">
     <title>学成网首页</title>
 </head>
-<style>
-    /*通用样式区域开始*/
-    * {
-    margin: 0;
-    padding: 0;
-}
-    .clearfix:before,.clearfix:after {
-        content:".";
-        display:table;
-    }
-    .clearfix:after {
-        clear:both;
-    }
-    .clearfix {
-        *zoom:1;
-    }
-    ul {
-        list-style: none;
-    }
-    a {
-        text-decoration: none;
-        color: #050505;
-    }
-    input {
-        border: none;
-        box-sizing: border-box;
-    }
-    body {
-        background-color: #f3f5f7;
-        font-family: "Microsoft YaHei UI";
-    }
-    .container { /* 因为我们的版心宽度都是1200 都要居中对齐 我们就声明一个公共类 */
-        width: 1200px;
-        margin: 0 auto;
-    }
-        /*页面头部区域*/
-    header {
-        /*width: 1920px;*/
-        height: 101px;
-        /*background-color: blue;*/
-        overflow: hidden;
-    }
-    header nav {
-        height: 42px;
-        width: 1588px;
-        /*background-color: pink;*/
-        margin: 30px auto;
-    }
-    /*头部logo区域*/
-    header nav .logo {
-        float: left;
-        /*margin-left: 160px;*/
-    }
-    /*头部导航文字区域*/
-    header nav .nav-bar{
-        float: left;
-        line-height: 42px;
-        margin-left: 70px;
-    }
-    header nav .nav-bar ul li {
-        float: left;
-        margin-right: 15px;
-    }
-    header nav .nav-bar ul li:last-child {
-        margin-right: 0px;
-    }
-    header nav .nav-bar ul li a {
-        color: #050505;
-        font-size: 18px;
-        letter-spacing: 2px;
-        display: block;
-        padding: 0 9px;
-    }
-    header nav .nav-bar ul li a:hover {
-        border-bottom: #00a4ff 2px solid;
-        /*color: #00a4ff;*/
-    }
-    /*搜索区域*/
-    header nav .search {
-        width: 410px;
-        height: 42px;
-        float: right;
-        border: 1px #00a4ff solid;
-        /*margin-left: 370px;*/
-    }
-    header nav .search input[type=text] {
-        width: 360px;
-        height: 42px;
-        float: left;
-        padding-left: 20px;
-        color: #bfbfbf;
-        font-size: 14px;
-        line-height: 42px;
-        box-sizing: border-box;
-    }
-    header nav .search input[type=submit] {
-        width: 50px;
-        height: 42px;
-        float: left;
-        background: #00a4ff url(images/search.png) center center no-repeat;
-    }
-    /*个人中心区域*/
-    header nav .personal {
-        width: 260px;
-        height: 42px;
-        line-height: 42px;
-        margin-left: 30px;
-        font-size: 14px;
-        /*background-color: pink;*/
-        float: right;
-    }
-    header nav .personal img {
-        margin: 0px 15px;
-    }
-    /*头部区域结束*/
-    /*banner区域开始*/
-    .banner {
-        height: 420px;
-        background-color: #1c036c;
-    }
-    .banner-center {
-        height: 420px;
-        background: url(images/banner.png) 0 0 no-repeat;
-    }
-    /*左侧导航栏区域*/
-    .slidebar{
-        height: 420px;
-        width: 190px;
-        background-color: rgba(0,0,0,0.3);
-        padding: 14px 20px;
-        box-sizing: border-box;
-        float: left;
-    }
-    .slidebar li a {
-        color: #ffffff;
-        font-size: 14px;
-        line-height: 44px;
-    }
-    .slidebar li a:hover {
-        color: #00a4ff;
-    }
-    .slidebar li a span{
-        float: right;
-        font-family: Arial;
-    }
-    /*课表区域*/
-    .classtable {
-        width: 228px;
-        height: 300px;
-        float: right;
-        background-color: #ffffff;
-        margin-top: 50px;
-    }
-    .classtable dt {
-        width: 228px;
-        height: 48px;
-        color: #fff;
-        line-height: 48px;
-        text-align: center;
-        background-color: #9bceea;
-        letter-spacing: 2px;
-        font-size: 18px;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-    .classtable dd {
-        height: 60px;
-        width: 190px;
-        margin: 0 auto;
-        border-bottom: 1px #ccc solid;
-        box-sizing: border-box;
-        padding-top:12px;
-    }
-    .classtable dd:last-child {
-        border:none;
-    }
-    .classtable dd:nth-child(4) h4,
-    .classtable dd:nth-child(4) p {
-        color: #00a4ff;
-    }
-
-    .classtable dd h4{
-        font-size: 16px;
-        color: #4e4e4e;
-        font-weight: normal;
-    }
-    .classtable dd p {
-        font-size: 14px;
-        color: #a5a5a5;
-    }
-    .classtable dd a {
-        display: block;
-        height: 38px;
-        width: 198px;
-        border: 1px solid #00a4ff;
-        text-align: center;
-        line-height: 38px;
-        color: #00a4ff;
-        font-size: 16px;
-        letter-spacing: 2px;
-        font-weight: bold;
-    }
-    .classtable dd a:hover {
-        background-color: #00a4ff;
-        color: #ffffff;
-    }
-    /*banner区域结束*/
-    /*推荐区域开始*/
-    /*推荐区导航栏*/
-    .recommend {
-        height: 60px;
-        background-color: #fff;
-        margin-top: 8px;
-        box-shadow: 0px 2px 3px 0px rgba(118, 118, 118, 0.2);
-        box-sizing: border-box;
-        padding: 21px 0;
-    }
-    .recommend ul a {
-        width: 122px;
-        height: 18px;
-        font-size: 16px;
-        color: #050505;
-        float: left;
-        text-align: center;
-        border-right: #bfbfbf solid 1px;
-    }
-    .recommend ul a:hover {
-        color: #00a4ff;
-    }
-    .recommend li:first-child a{
-        color: #00a4ff;
-        font-weight: bold;
-    }
-    .recommend li:nth-last-child(2) a {
-        border:none;
-
-    }
-    .recommend li:last-child a {
-        color: #00a4ff;
-        border:none;
-        float: right;
-        font-weight: bold;
-    }
-    /*推荐区内容*/
-    
-    /*推荐区域结束*/
-</style>
-
+<link rel="stylesheet" href="style.css">
 <!--结构区域-->
 <body>
 <!--头部区域-->
@@ -320,6 +73,16 @@
                     </dd>
                 </dl>
             </div>
+            <div class="dot">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!--推荐区域-->
@@ -337,7 +100,127 @@
         </ul>
     </div>
     <!--推荐区内容-->
-
+    <!--精品推荐区域-->
+    <div class="rec container clearfix">
+        <div class="rec-hd"><!--精品推荐头部-->
+            <h4>精品推荐</h4>
+            <a href="#">查看全部</a>
+        </div>
+        <div class="rec-bd"><!--精品推荐主内容-->
+            <ul>
+                <li>
+                    <img src="images/hot.png" alt="" class="hot">
+                    <a href="#">
+                        <img src="images/1.png" alt="">
+                        <h5>Think PHP 5.0 博客系统实战项目演练</h5>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/2.png" alt="">
+                        <h5>Android 网络图片加载框架详解</h5>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/3.png" alt="">
+                        <h5>Angular 2 最新框架+主流技术+项目实战</h5>
+                        <p><span>高级</span> • 1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/4.png" alt="">
+                        <h5>Android Hybrid APP开发实战 H5+原生！</h5>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/4.png" alt="">
+                        <h5>Android Hybrid APP开发实战 H5+原生！</h5>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/1.png" alt="">
+                        <h5>Think PHP 5.0 博客系统实战项目演练</h5>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/2.png" alt="">
+                        <h5>Android 网络图片加载框架详解</h5>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/3.png" alt="">
+                        <h5>Angular 2 最新框架+主流技术+项目实战</h5>
+                        <p><span>高级</span> • 1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/4.png" alt="">
+                        <h5>Android Hybrid APP开发实战 H5+原生！</h5>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="images/4.png" alt="">
+                        <h5>Android Hybrid APP开发实战 H5+原生！</h5>
+                        <p><span>高级</span>  •  1125人在学习</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="down container">
+        <img src="images/down.png" alt="">
+    </div>
+<footer>
+<div class="foot container">
+    <div class="foot-l">
+        <img src="images/logo.png" alt="">
+        <p>学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程<br>
+            © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号</p>
+        <a href="#">下载APP</a>
+    </div>
+    <div class="foot-r">
+        <dl>
+            <dt>关于学成网</dt>
+            <dd><a href="#">关于</a></dd>
+            <dd><a href="#">管理团队</a></dd>
+            <dd><a href="#">工作机会</a></dd>
+            <dd><a href="#">客户服务</a></dd>
+            <dd><a href="#">帮助</a></dd>
+        </dl>
+        <dl>
+            <dt>关于学成网</dt>
+            <dd><a href="#">关于</a></dd>
+            <dd><a href="#">管理团队</a></dd>
+            <dd><a href="#">工作机会</a></dd>
+            <dd><a href="#">客户服务</a></dd>
+            <dd><a href="#">帮助</a></dd>
+        </dl>
+        <dl>
+            <dt>关于学成网</dt>
+            <dd><a href="#">关于</a></dd>
+            <dd><a href="#">管理团队</a></dd>
+            <dd><a href="#">工作机会</a></dd>
+            <dd><a href="#">客户服务</a></dd>
+            <dd><a href="#">帮助</a></dd>
+        </dl>
+    </div>
+</div>
+</footer>
 </body>
 
 </html>
